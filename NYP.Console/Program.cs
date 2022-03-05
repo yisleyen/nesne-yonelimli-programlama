@@ -1,5 +1,7 @@
 ﻿using NYP.Lib;
 
+#region human & footballer
+/*
 OffensiveFootballer offensiveFootballer = new OffensiveFootballer();
 
 offensiveFootballer.Name = "Sergen";
@@ -31,3 +33,22 @@ defensiveFootballer.TeamsPlayed = defensiveTeamsPlayed;
 
 Console.WriteLine(defensiveFootballer.Breathe());
 Console.WriteLine(defensiveFootballer.Shoot());
+*/
+#endregion
+
+#region employee
+
+Boss boss = new Boss();
+Manager manager = new Manager("Murat Özkan", 15, null);
+
+Developer developer = new Developer("Kenan Demir", 9, manager);
+Analyst analyst = new Analyst("Ayşe Demir", 6, manager);
+
+manager.employees.AddRange(new List<Employee>() { developer, analyst });
+boss.ManagerList.Add(manager);
+
+boss.TotalSalaryFind();
+boss.DistributeSalaries();
+manager.DistributeSalaries();
+
+#endregion
